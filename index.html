@@ -8,7 +8,7 @@
             $(document).ready(function(){
                 var max = 151;
                 for(var i = 1; i <= max; i++){
-                    $(".pokemon").append("<img src=\"http://pokeapi.co/media/img/" + i + ".png\" id=\"" + i + "\" class=\"pokemonImg\">");
+                    $(".pokemon").append("<img src=\"https://pokeapi.co/media/img/" + i + ".png\" id=\"" + i + "\" class=\"pokemonImg\">");
                 };
                 
                 $(".pokemon").on("click", "img", function(e){
@@ -21,7 +21,7 @@
                     
                     var id = e.currentTarget.id;
                     // console.log("start net req");
-                    $.get("http://pokeapi.co/api/v2/pokemon/" + id + "/", function(pokemon) {
+                    $.get("https://pokeapi.co/api/v2/pokemon/" + id + "/", function(pokemon) {
                         // console.log(pokemon);
                         // console.log(pokemon.sprites.front_default);
                         $("#types").append("Types");
